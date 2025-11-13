@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripture Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #d97706;
+      margin-bottom: 20px;
+    }
+    button {
+      background: #d97706;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px 5px;
+    }
+    button:hover {
+      background: #b45309;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fef3c7;
+      border-radius: 8px;
+      min-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Scripture Memory - Test Page</h1>
+    <p>If you can see this, the basic HTML is working!</p>
+    
+    <button onclick="testJS()">Click to Test JavaScript</button>
+    <button onclick="testLocalStorage()">Test LocalStorage</button>
+    
+    <div id="output"></div>
+  </div>
+
+  <script>
+    console.log('Script is loading...');
+    
+    function testJS() {
+      document.getElementById('output').innerHTML = '✅ JavaScript is working! Time: ' + new Date().toLocaleTimeString();
+    }
+    
+    function testLocalStorage() {
+      try {
+        localStorage.setItem('test', 'hello');
+        const value = localStorage.getItem('test');
+        document.getElementById('output').innerHTML = '✅ LocalStorage works! Stored: ' + value;
+      } catch (e) {
+        document.getElementById('output').innerHTML = '❌ LocalStorage error: ' + e.message;
+      }
+    }
+    
+    // Auto test on load
+    window.onload = function() {
+      console.log('Page loaded successfully!');
+      document.getElementById('output').innerHTML = '✅ Page loaded! JavaScript is running.';
+    };
+  </script>
+</body>
+</html>
