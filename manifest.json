@@ -2,7 +2,8 @@
   "name": "Daily Scripture Memory",
   "short_name": "Scripture",
   "description": "Memorize Bible verses with daily practice and audio playback",
-  "start_url": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#fffbeb",
   "theme_color": "#d97706",
@@ -21,21 +22,5 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": ["education", "lifestyle", "productivity"],
-  "shortcuts": [
-    {
-      "name": "View Library",
-      "short_name": "Library",
-      "description": "Browse all saved passages",
-      "url": "/?view=library",
-      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Add Passage",
-      "short_name": "Add",
-      "description": "Add a new Scripture passage",
-      "url": "/?view=add",
-      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
-    }
-  ]
+  "categories": ["education", "lifestyle", "productivity"]
 }
